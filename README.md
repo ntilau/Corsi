@@ -34,6 +34,7 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 - `fis2` — Fisica Generale 2
 - `chim` — Chimica
 - `compfis` — Complementi di Fisica
+- `fss` — Fisica dello Stato Solido (potenziali periodici, modello di Kronig-Penney)
 
 ### Elettronica e Microelettronica
 - `ele1` — Elettronica 1
@@ -41,6 +42,8 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 - `eledig` — Elettronica Digitale
 - `elesdig1` — Elettronica dei Sistemi Digitali 1
 - `elesdig2` — Elettronica dei Sistemi Digitali 2
+- `eletlc1` — Elettronica delle Telecomunicazioni 1 (mixer, filtri, LNA, PA, linearizzazione)
+- `eletlc2` — Elettronica delle Telecomunicazioni 2 (radar e SAR, tecniche di interconnessione digitale)
 - `eleind` — Elettronica Industriale (amplificatori di potenza, convertitori DC-DC)
 - `dispele` — Dispositivi Elettronici (fisica dei semiconduttori, trasporto)
 - `microele` — Microelettronica (~2188 file, progetti CAD EDA completi)
@@ -76,7 +79,6 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 - `siteleriv` — Sistemi di Telerilevamento (remote sensing)
 
 ### Segnali e Sistemi
-- `fss` — Fondamenti di Sistemi e Segnali
 - `ens1` — Elaborazione Numerica dei Segnali (DSP, trasformata Zeta)
 - `assd` — Analisi dei Sistemi Dinamici (diagrammi di Bode, controllo)
 
@@ -113,13 +115,13 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 | Estensione | Qtà approx | Descrizione |
 |---|---|---|
 | `.pdf` | ~1500 | Dispense, slide, esercizi, datasheet, articoli |
-| `.tvz`, `.tvc`, `.cdb`, `.hdb`, `.nvc` | varie | File progetto CAD EDA (Cadence o similare) — principalmente in `microele/` e `cadsisem/` |
-| `.m` | ~150 | Script e funzioni MATLAB |
-| `.ppt`/`.pptx` | ~100 | Presentazioni PowerPoint |
-| `.zip`/`.rar` | ~110 | Archivi compressi di materiali e software |
-| `.tex` | sparse | Sorgenti LaTeX per relazioni e appunti |
-| `.mp4`, `.avi` | sparse | Video (simulazioni radar, animazioni) |
+| `.tvz`, `.tvc`, `.cdb`, `.hdb`, `.nvc` | ~755 | File progetto CAD EDA (Cadence), tutti in `microele/Prof/` |
+| `.m` | ~150 | Script e funzioni MATLAB (soprattutto in `cadsisem/` e `sirad/`) |
+| `.ppt`/`.pptx` | ~120 | Presentazioni PowerPoint |
+| `.zip`/`.rar` | ~100 | Archivi compressi di materiali e software |
+| `.tex` | ~12 | Sorgenti LaTeX per relazioni e appunti (`labprogaf/`, `scaf/`) |
+| `.mp4`, `.avi` | ~12 | Video, tutti in `sirad/` (simulazioni radar) |
 
 ## Dimensioni totali
 
-~5 GB distribuiti su ~70 directory. Le directory più grandi sono `cadsisem` (790 MB, 5315 file), `disp` (401 MB), `ttmomm` (304 MB), `optel2` (307 MB), ed `elesdig2` (262 MB).
+~5 GB distribuiti su 67 directory. Le directory più grandi sono `disp` (401 MB), `optel2` (307 MB), `ttmomm` (304 MB), `elesdig2` (262 MB) e `sten` (251 MB). `cadsisem` è scesa a 202 MB (309 file) dopo la rimozione degli artefatti di simulazione.
