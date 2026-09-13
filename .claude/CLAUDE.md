@@ -45,3 +45,59 @@ Directories `cadsisem/` (202 MB) and `microele/` (103 MB, 2188 files) contain la
 ## Keeping README.md in sync
 
 `README.md` is the human-facing index and is written in Italian; this file is the agent-facing one, in English. They are both edited by hand, so nothing enforces agreement. The README was reconciled against the tree on 2026-09-11 — all 67 course directories are listed, and the size and file-count figures match. Update it when you add or remove a course, or when a course's dominant topic changes.
+
+## Commonly used commands for Claude Code
+
+Since this is a document storage repository with no code to build or test, typical Claude Code usage focuses on:
+- **Searching content**: Use `grep -r` or `rg` to find topics across PDFs and text files
+  - Example: `grep -r "Kronig-Penney" fss/` to find Kronig-Penney model in solid state physics
+  - Example: `rg -i "fourier" ens1/` (if ripgrep is available) for signals and systems
+- **Reading consolidated PDFs**: Start with `<course>/<course>.pdf` for each course
+  - Example: `open retel/retel.pdf` (on macOS) or use any PDF viewer
+- **Navigating course structure**: Use standard directory listing commands
+  - Example: `ls -la microele/` to see what's in the microelectronics course
+  - Example: `find cadsisem -name "*.m" -type f` to find MATLAB scripts
+- **Getting course overviews**: Check each course's README if present, or look at the main README.md
+- **PDF text extraction**: For searching within PDFs, consider using `pdftotext` (if available) or Claude's PDF reading capability
+  - Example: `pdftotext fss/fss.pdf - | grep -i "band gap"` (requires poppler utilities)
+
+## High-level architecture and structure
+
+The repository follows a simple course-based organization:
+1. **Top-level**: 67 directories, each representing a university course
+2. **Per-course**: Standard subdirectories for different material types (slides, labs, software, etc.)
+3. **Consolidated resources**: Each course typically has a single comprehensive PDF at its root
+4. **Specialized tools**: Certain courses host specific EDA or software tool projects:
+   - Microelectronics (`microele/`): Cadence, Quartus, Scilab projects
+   - CAD for Electronic Systems (`cadsisem/`): MATLAB scripts, HFSS simulations, LaTeX
+   - Radar (`sirad/`): MATLAB scripts, video files
+   - Electromagnetic Fields and Antennas (`scaf/`): AWR Microwave Office projects, LaTeX
+   - Microwave/mm-wave Technologies (`ttmomm/`): AWR Microwave Office projects
+
+This structure reflects the archival nature of the repository - it's organized for reference and retrieval of educational materials rather than software development.
+
+## Working with different file types
+
+- **PDFs**: Best for initial topic exploration via the consolidated course PDFs
+- **MATLAB (.m)**: Found primarily in `cadsisem/` and `sirad/`; can be viewed or executed if MATLAB is available
+- **Scilab (.sci)**: Located in `microele/`; require Scilab to run
+- **EDA projects**: 
+  - Cadence: `.cdb`, `.hdb` files in `microele/Prof/`
+  - Quartus: `.qpf`, `.qsf`, etc. in `microele/`
+  - AWR: `.emp`, `.ads` files in `scaf/` and `ttmomm/`
+- **LaTeX (.tex)**: Source files in `labprogaf/`, `scaf/`, `ttmomm/`, `cadsisem/` for document compilation
+- **Other**: ZIP/RAR archives, video files (.mp4, .avi), PowerPoint presentations
+
+## Important notes for Claude Code usage
+
+1. **No execution environment**: This repository doesn't contain executable software projects, so there's nothing to "run" in the traditional sense
+2. **Focus on retrieval**: The value comes from finding and referencing educational materials
+3. **Large binary files**: Many PDFs are large (50-100 MB range); use course PDFs for broad searches before diving into specialized directories
+4. **Course abbreviations**: Learn the standard abbreviations used in directory names for efficient navigation
+5. **Cross-referencing**: Topics often span multiple courses (e.g., Fourier analysis appears in both signals/systems and electronics courses)
+
+When adding new material:
+- Follow the existing directory structure for the course
+- Consider creating/updating the consolidated course PDF if significant new content is added
+- Adhere to the ~500 MB commit batch guideline for large additions
+- Remove redundant files (like simulation outputs) when keeping derived versions
