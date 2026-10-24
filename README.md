@@ -96,7 +96,7 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 ### Progettazione e Laboratori
 - `cadsisem` — CAD per Sistemi Elettronici (~5315 file, il corso più corposo)
 - `labprogaf` — Laboratorio di Progettazione a Radiofrequenza (modulazioni, matching)
-- `misel` — Misure Elettroniche
+- `misel` — Misure Elettroniche; materiale di Misure Elettriche da Prato in misel/prato/
 
 ### Altri insegnamenti
 - `afcq1` — Affidabilità e Controllo Qualità (FMEA, FMECA, QFD, statistica)
@@ -105,6 +105,7 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 - `fem` — Fisica Elettromagnetica (carta di Smith)
 - `orgpoleur` — Organizzazione Politica Europea
 - `orprof` — Orientamento Professionale
+- `abilitazione` — Esame di Stato / abilitazione all'esercizio della professione di Ingegnere dell'Informazione (materiale da Prato)
 - `stat` — Statistica
 - `sten` — Sistemi Termici ed Energetici (termodinamica, cicli a vapore)
 - `tbecu` — Tecnologie Biomediche (diagnostica per immagini, colorimetria)
@@ -124,4 +125,4 @@ Ogni directory corrisponde a un insegnamento. All'interno si trovano generalment
 
 ## Dimensioni totali
 
-~5 GB distribuiti su 67 directory. Le directory più grandi sono `disp` (401 MB), `optel2` (307 MB), `ttmomm` (304 MB), `elesdig2` (262 MB) e `sten` (251 MB). `cadsisem` è scesa a 202 MB (309 file) dopo la rimozione degli artefatti di simulazione.
+~5.2 GB distribuiti su 68 directory. Le directory più grandi sono `disp` (401 MB), `optel2` (307 MB), `ttmomm` (304 MB), `elesdig2` (262 MB) e `sten` (251 MB). `cadsisem` è scesa a 202 MB (309 file) dopo la rimozione degli artefatti di simulazione.
